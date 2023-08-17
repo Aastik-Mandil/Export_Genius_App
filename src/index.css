@@ -1,13 +1,50 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-shadow: border-box;
+  font-family: Montserrat Alternates !important;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.bannerDiv {
+  background-image: url("./assets/banner.png");
+  background-repeat: no-repeat;
+}
+.ellipseDiv {
+  background-image: url("./assets/circle.png");
+  background-repeat: calc(2);
+  background-position: right top;
+}
+.guideDiv {
+  background-image: url("./assets/Guide.png");
+  background-repeat: no-repeat;
+}
+.clientDiv {
+  background-image: url("./assets/aboutUs.png");
+  background-repeat: no-repeat;
+}
+
+/* carousel */
+.react-multiple-carousel__arrow {
+  background: rgba(0, 0, 0, 0.14);
+  color: white;
+}
+
+.react-multiple-carousel__arrow--left {
+  display: none;
+}
+
+.react-multiple-carousel__arrow--right {
+  display: none;
+}
+
+.carousel-container:hover > .react-multiple-carousel__arrow--left {
+  display: block;
+}
+
+.carousel-container:hover > .react-multiple-carousel__arrow--right {
+  display: block;
 }
